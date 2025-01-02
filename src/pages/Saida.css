@@ -1,0 +1,63 @@
+/* Estilos para a página de saída */
+.saida-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: rgb(184, 157, 157); /* Cor de fundo suave */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .saida-content {
+    text-align: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Limita a largura do conteúdo */
+  }
+  
+  .saida-content h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .saida-message {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  .saida-link {
+    font-size: 1rem;
+    color: #34495e;
+  }
+  
+  .saida-link .link-retorno {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .saida-link .link-retorno:hover {
+    text-decoration: underline;
+    color: #1f6f96;
+  }
+  
+  @media (max-width: 768px) {
+    .saida-content {
+      padding: 20px;
+    }
+  
+    .saida-content h1 {
+      font-size: 2rem;
+    }
+  
+    .saida-message {
+      font-size: 1rem;
+    }
+  }
+  

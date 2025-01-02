@@ -1,0 +1,104 @@
+/* Definindo variáveis CSS no :root */
+:root {
+    --toast-sucess-bg: #2a8c0c;  /* Cor de fundo para toast de erro */
+    --toast-sucess-text: white;  /* Cor do texto para toast de erro */
+    --toast-sucess-progress: white;  /* Cor da barra de progresso para erro */
+    --toast-sucess-icon: white;
+}
+
+.posts-container {
+    display: grid;  /* Isso garante que o container seja um grid */
+    gap: 16px;      /* Ajuste o espaço entre os itens */
+}
+
+.grid-1 {
+    grid-template-columns: repeat(1, 1fr); /* 1 coluna */
+}
+  
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+}
+  
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+}
+
+.post-card {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.actions-container {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 12px; /* Arredonda as bordas */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.post-descricao, .post-alt, .actions-container {
+    visibility: hidden;
+}
+
+.post-descricao {
+    width: 300px;               /* Define a largura do elemento */
+    height: 18px;               /* Define a altura do elemento */
+    overflow: hidden;           /* Esconde qualquer conteúdo que ultrapasse os limites do elemento */
+    white-space: nowrap;        /* Impede que o texto quebre para a linha seguinte */
+    text-overflow: ellipsis;    /* Adiciona "..." ao final do texto que ultrapassar o limite do elemento */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    font-style: italic;
+    border: 1px solid #ccc;      
+}
+/* Torna todos os elementos visíveis quando o mouse passa sobre o contêiner .post-card */
+.post-card:hover .post-descricao,
+.post-card:hover .post-alt,
+.post-card:hover .actions-container {
+  visibility: visible;
+  opacity: 1;  /* Torna os elementos visíveis */
+}
+
+.actions-container button {
+    background-color: rgb(90, 89, 93);
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 12px; /* Arredonda as bordas */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.actions-container:hover {
+    visibility: visible;
+}
+
+.actions-container button:hover {
+    background-color: rgb(33, 7, 148);
+}
+.toast-sucess {
+    background-color: var(--toast-sucess-bg);
+    color: var(--toast-sucess-text);
+}
+/* Cor da barra de progresso para o toast de erro */
+.toast-sucess .Toastify__progress-bar {
+    background-color: var(--toast-sucess-progress);  /* Cor da barra de progresso (vermelho escuro) */
+}
+.toast-sucess svg {
+    fill: var(--toast-sucess-icon); /* Defina uma cor para o ícone de aviso */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .post-card {
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+    .actions-container button {
+        color: white;
+    }
+}
