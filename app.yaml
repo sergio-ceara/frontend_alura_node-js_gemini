@@ -1,0 +1,11 @@
+runtime: nodejs18
+env: standard
+
+handlers:
+  - url: /static
+    static_dir: dist
+
+entrypoint: node server.js
+
+env_variables:
+  NODE_ENV: "production"
